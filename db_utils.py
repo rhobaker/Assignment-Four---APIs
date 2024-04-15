@@ -115,7 +115,6 @@ def get_all_availability_date(string_date):
         if db_connection:
             db_connection.close()
             print("DB connection is closed")
-    print(availability)
     return availability
 
 #Function to get all lessons available for a selected time.
@@ -151,7 +150,6 @@ def get_all_availability_time(time):
         if db_connection:
             db_connection.close()
             print("DB connection is closed")
-    print(availability)
     return availability
 
 
@@ -293,13 +291,13 @@ def create_message(lesson_teacher, message):
             db_connection.close()
             print("DB connection is closed")
 
-if __name__ == '__main__':
-    # get_customer_id("Julia", "Chapman")
-    # get_lesson_time_id("10-11")
-    # create_message(1, "Hello, World!")
-    get_all_availability_date("2024-05-02")
-    get_all_availability_time("11-12")
-    get_all_customer_bookings("Julia", "Chapman")
+# if __name__ == '__main__':
+#     get_customer_id("Julia", "Chapman")
+#     get_lesson_time_id("10-11")
+#     create_message(1, "Hello, World!")
+#     get_all_availability_date("2024-05-02")
+#     get_all_availability_time("11-12")
+#     get_all_customer_bookings("Julia", "Chapman")
     # add_booking("2024-05-03","09-10","Victoria", "Beckham")
     # remove_booking("2024-05-03","09-10")
     # add_customer("Emily", "Pankhurst")
