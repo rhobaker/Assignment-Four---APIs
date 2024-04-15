@@ -92,6 +92,7 @@ def display_availability_date(records):
         print("{:<20} {:<20}".format(
             item['Time'], item['Teacher']
         ))
+        
 #Function to display the availability by time data in a readable format.
 def display_availability_time(records):
     # Print the names of the columns.
@@ -128,7 +129,6 @@ def new_customer_information():
     #Run function to send information via an API to the database.
     add_new_customer(new_customer_json)
 
-
 #Function to book a lesson.
 def book_new_lesson(string_date, time):
     # Ask user for their name.
@@ -139,7 +139,6 @@ def book_new_lesson(string_date, time):
     json_booking = json.dumps(booking)
     # Run function to send information via an API to the database.
     add_new_booking(json_booking)
-
 
 #Function to retrieve lessons availability:
 def retrieve_lesson_availability():
@@ -229,7 +228,6 @@ def run():
         customer_last_name = input("What is your second name? ")
         #Get current bookings from the database via an API and display to the customer.
         current_bookings = get_bookings_by_customer(customer_first_name, customer_last_name)
-        print(current_bookings)
         print('**************** Your Current Bookings Are ****************')
         display_availability_current_bookings(current_bookings)
         run()
@@ -241,7 +239,6 @@ def run():
         customer_last_name = input("What is your second name? ")
         #Get current bookings from the database via an API and display to the customer.       
         current_bookings = get_bookings_by_customer(customer_first_name, customer_last_name)
-        print(current_bookings)
         print('**************** Your Current Bookings Are ****************')
         display_availability_current_bookings(current_bookings)
         # Get user information about which lesson to canel.     
