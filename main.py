@@ -200,6 +200,7 @@ def run():
     print('------------------ Welcome to Dolphin Swimming School ------------------')
     print('------------------- Where everyone can learn to swim -------------------')
     print('--- Individual swimming lessons for people of all ages and abilities ---')
+    print('------------------ Our mission is to teach YOU to swim -----------------')
     print('************************************************************************')
     print()
     print('Please select from the options below:')    
