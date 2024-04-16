@@ -145,11 +145,12 @@ def retrieve_lesson_availability():
     # Get user information:
     print("We are currently taking bookings for weekdays between 2024-05-01 to 2024-05-17:")
     print("These dates are:")
-    print("May 1st - May 3rd")
-    print("May 6th - May 10th")
-    print("May 13th - May 17th")
+    print("Wednesday May 1st - Friday May 3rd")
+    print("Monday May 6th - Friday May 10th")
+    print("Monday May 13th - Friday May 17th")
     print("Our lesson times are:")
     print("09-10, 10-11, 11-12, 14-15, 15-16, 16-17")
+    print("All lessons are one hour long")
     search_option = input('Would you like to search by date or time (Date/Time) ?')
     if search_option == "Date":
         string_date = input('What date you would like to book your lesson for (YYYY-MM-DD)?: ')
@@ -209,7 +210,7 @@ def run():
     print("3. Cancel A Booking")
     print("4. Send A Message To One Of Our Teachers")
     print()
-    option = input("Please Select An Option: ")  
+    option = input("Please Select An Option (1-4): ")  
     # Process information for option 1:
     if option == "1":
         print()
@@ -257,7 +258,7 @@ def run():
         print()
         # Get information from the user.
         lesson_teacher_id = input("Which teacher do you want to send a message to (Becky, Amy, Alex)? ")
-        message = input("What is your message? ")
+        message = input("What is your message? Please include your full name.")
         # Turn user information into JSON file.
         message_json = json.dumps({"lesson_teacher_id":lesson_teacher_id, "message":message})
         # Put the message in the database via an API
