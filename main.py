@@ -212,7 +212,7 @@ def run():
     # Process information for option 1:
     if option == "1":
         print()
-        customer_status = input("Have you booked with Dolphin Swimming School before (Y/N)? ")
+        customer_status = input("Have you set up an account with Dolphin Swimming School (Y/N)? ")
         if customer_status == 'N' or customer_status == 'n':
             # Create a new customer then book lesson
             new_customer_information()
