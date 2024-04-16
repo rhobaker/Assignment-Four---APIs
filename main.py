@@ -152,7 +152,7 @@ def retrieve_lesson_availability():
     print("09-10, 10-11, 11-12, 14-15, 15-16, 16-17")
     search_option = input('Would you like to search by date or time (Date/Time) ?')
     if search_option == "Date":
-        string_date = input('What date you would like to book your lesson for YYYY-MM-DD?: ')
+        string_date = input('What date you would like to book your lesson for (YYYY-MM-DD)?: ')
         # Run function to get availability via an API from the database.
         slots = get_availability_by_day(string_date)
         # Display this information to the user.
@@ -162,6 +162,7 @@ def retrieve_lesson_availability():
         print("The lessons with available places on " + string_date + " are:")
         display_availability_date(slots)
         print()
+        #Ask if the user would now like to book a lesson
         date_place_booking = input('Would you like to book a lesson (Y/N)?  ')
         if date_place_booking == 'Y' or date_place_booking == 'y':
             time = input('Which time would you like to book? ')
@@ -170,7 +171,7 @@ def retrieve_lesson_availability():
         else:
             run()
     elif search_option == "Time":
-        time = input('What time would you like to book your lesson for XX-XX?: ')
+        time = input('What time would you like to book your lesson for (XX-XX)?: ')
         print(time)
         # Run function to get availability via an API from the database.
         time_available = get_availability_by_time(time)
@@ -182,6 +183,7 @@ def retrieve_lesson_availability():
         print("The dates with available places at " + time + " are:")
         display_availability_time(time_available)
         print()
+        #Ask if the user would now like to book a lesson
         time_place_booking = input('Would you like to book a lesson (Y/N)?  ')
         if time_place_booking == 'Y' or time_place_booking == 'y':
             string_date = input('What date would you like to book your lesson for YYYY-MM-DD?: ')
